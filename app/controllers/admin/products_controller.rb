@@ -1,5 +1,8 @@
 class Admin::ProductsController < ApplicationController
 
+  # IF I WANT TO MAKE THIS PAGE LOGIN REQUIRED. I ALSO MUST UNCOMMENT THE application_controller.rb segment
+  # before_filter :authorize
+
   def index
     @products = Product.order(id: :desc).all
   end
