@@ -1,5 +1,7 @@
 class Admin::ProductsController < ApplicationController
 
+  http_basic_authenticate_with name: ENV['ADMIN_USERNAME_KEY'], password: ENV['ADMIN_PASSWORD_KEY']
+
   # IF I WANT TO MAKE THIS PAGE LOGIN REQUIRED. I ALSO MUST UNCOMMENT THE application_controller.rb segment
   # before_filter :authorize
 
