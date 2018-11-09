@@ -1,1 +1,14 @@
-<p>hi</p>
+<!-- app/views/user/new.html.erb -->
+
+<h1>Sign up for a Jungle account</h1>
+
+<%= form_for :user, url: '/users' do |f| %>
+    Name: <%= f.text_field :name %>
+    Email: <%= f.text_field :email %>
+    Password: <%= f.text_field :password %>
+    Password Confirmation: <%= f.password_field :password_confirmation %>
+    <%= f.submit "Signup" %>
+<% end %>
+
+
+
