@@ -26,21 +26,26 @@
         </dl>
       </div>
     </div>
-    <br>
-    <br>
-      <div class="col-sm-4">
-        <%= form_for [@product, @product.reviews.create] do |f| %>
-          <%= f.text_area :description %>
-          <%= f.select :rating, [['Amazing', 5], ['Good', 4], ['Average', 3], ['Poor', 2], ['Terrible', 1]] %>
-          <%= f.submit "Submit Review" %>
-        <% end %>
-      </div>
 
+<div class="row">
         <dd><h3>Reviews</h3></dd>
         <% @reviews.each do |review| %>
           <%= render 'review', review: review %>
         <% end %>
     </div>
+<br>
+    <div class="row">
+    <div class="col-sm-12">
+        <%= form_for [@product, @product.reviews.create] do |f| %>
+          <%= f.text_area :description %>
+          <%= f.select :rating, [['Top-Notch', 5], ['Good', 4], ['Average', 3], ['Poor', 2], ['Bad', 1]] %>
+          <%= f.submit "Submit Review" %>
+        <% end %>
+        </div>
+    </div>
+<br>
+
   </article>
 
 </section>
+
