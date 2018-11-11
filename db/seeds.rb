@@ -148,6 +148,18 @@ User.create!({
   password: BCrypt::Password.create("123")
 })
 
+User.create!({
+  name: 'Sybil',
+  email: 'sybil@gmail.com',
+  password: BCrypt::Password.create("123")
+})
+
+User.create!({
+  name: 'Basil',
+  email: 'basil@gmail.com',
+  password: BCrypt::Password.create("123")
+})
+
 puts 'Recreating reviews'
 
 Review.destroy_all
